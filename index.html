@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>NG's SGPA Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+    <!-- Top bar with the title -->
+    <header>
+        <div class="top-bar">
+            <h1>NG's SGPA Calculator</h1>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <form id="calculator-form" onsubmit="calculateAndRedirect(event)">
+            <!-- Input for name -->
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <!-- Inputs for grades in 9 subjects -->
+            <div class="subject-group">
+                <!-- Subject: PSC -->
+                <div class="subject-label">
+                    <label for="psc">PSC:</label>
+                </div>
+                <div class="subject-input">
+                    <select id="psc" name="psc" required>
+                        <option value="">Select a grade</option>
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8">A</option>
+                        <option value="7">B+</option>
+                        <option value="6">B</option>
+                        <option value="5">C</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Repeat the same pattern for the remaining subjects -->
+            <div class="subject-group">
+                <!-- Subject: ADD -->
+                <div class="subject-label">
+                    <label for="add">ADD:</label>
+                </div>
+                <div class="subject-input">
+                    <select id="add" name="add" required>
+                        <option value="">Select a grade</option>
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8">A</option>
+                        <option value="7">B+</option>
+                        <option value="6">B</option>
+                        <option value="5">C</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Subject: PIS -->
+            <div class="subject-group">
+                <div class="subject-label">
+                    <label for="pis">PIS:</label>
+                </div>
+                <div class="subject-input">
+                    <select id="pis" name="pis" required>
+                        <option value="">Select a grade</option>
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8">A</option>
+                        <option value="7">B+</option>
+                        <option value="6">B</option>
+                        <option value="5">C</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Subject: Tamil -->
+            <div class="subject-group">
+                <div class="subject-label">
+                    <label for="tamil">Tamil:</label>
+                </div>
+                <div class="subject-input">
+                    <select id="tamil" name="tamil" required>
+                        <option value="">Select a grade</option>
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8">A</option>
+                        <option value="7">B+</option>
+                        <option value="6">B</option>
+                        <option value="5">C</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Subject: English -->
+            <div class="subject-group">
+                <div class="subject-label">
+                    <label for="english">English:</label>
+                </div>
+                <div class="subject-input">
+                    <select id="english" name="english" required>
+                        <option value="">Select a grade</option>
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8">A</option>
+                        <option value="7">B+</option>
+                        <option value="6">B</option>
+                        <option value="5">C</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Subject: Maths -->
+            <div class="subject-group">
+                <div class="subject-label">
+                    <label for="maths">Maths:</label>
+                </div>
+                <div class="subject-input">
+                    <select id="maths" name="maths" required>
+                        <option value="">Select a grade</option>
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8">A</option>
+                        <option value="7">B+</option>
+                        <option value="6">B</option>
+                        <option value="5">C</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Subject: EP Lab -->
+            <div class="subject-group">
+                <div class="subject-label">
+                    <label for="ep_lab">EP Lab:</label>
+                </div>
+                <div class="subject-input">
+                    <select id="ep_lab" name="ep_lab" required>
+                        <option value="">Select a grade</option>
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8">A</option>
+                        <option value="7">B+</option>
+                        <option value="6">B</option>
+                        <option value="5">C</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Subject: PSC Lab -->
+            <div class="subject-group">
+                <div class="subject-label">
+                    <label for="psc_lab">PSC Lab:</label>
+                </div>
+                <div class="subject-input">
+                    <select id="psc_lab" name="psc_lab" required>
+                        <option value="">Select a grade</option>
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8">A</option>
+                        <option value="7">B+</option>
+                        <option value="6">B</option>
+                        <option value="5">C</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Subject: Soft Skills -->
+            <div class="subject-group">
+                <div class="subject-label">
+                    <label for="soft_skills">Soft Skills:</label>
+                </div>
+                <div class="subject-input">
+                    <select id="soft_skills" name="soft_skills" required>
+                        <option value="">Select a grade</option>
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8">A</option>
+                        <option value="7">B+</option>
+                        <option value="6">B</option>
+                        <option value="5">C</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <div class="input-group">
+                <button type="submit">Calculate SGPA</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="calculate_sgpa.js"></script>
+</body>
+</html>

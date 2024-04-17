@@ -1,0 +1,92 @@
+/* CSS File: styles.css */
+
+/* General body styles */
+body {
+    font-family: 'Bahnschrift', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d4e0f0;
+    max-width: 375px; /* Mobile screen width, centered */
+    margin: auto;
+}
+
+/* Top bar styles */
+.top-bar {
+    
+    margin-top: 20px;
+    background-color: #1E90FF;
+    color: rgb(225, 241, 246);
+    text-align: center;
+    position: fixed;
+    width: 370px;
+    top: -15px;
+    z-index: 1000;
+    border-radius: 15px 0 15px 15px; /* Curved border */
+}
+
+/* Main content styles */
+main {
+    margin-top: 20px;
+    padding: 10px;
+    padding-top: 70px; /* Space for fixed top bar */
+}
+
+/* Input group styles */
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; /* Bold font for labels */
+}
+
+.input-group input {
+    
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-weight: bold; /* Bold font for input fields */
+}
+
+/* Subject group styles */
+.subject-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.subject-label {
+    flex: 0 0 40%;
+    font-weight: bold; /* Bold font for labels */
+}
+
+.subject-input {
+    flex: 1;
+}
+
+.subject-input select {
+    width: auto; /* Adjust the width of the select element */
+    padding-right: 8px;
+    padding-left: 10px; /* Increased left padding */
+    border-radius: 5px;
+    font-weight: bold; /* Bold font */
+}
+
+.input-group button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 40%;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold; /* Bold font for button */
+}
+
+.input-group button:hover {
+    background-color: #1c7dc3;
+}

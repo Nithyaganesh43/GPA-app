@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SGPA Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="result.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main content -->
+    <main>
+        <div class="result-container">
+            <h2 class="animated-text">Congratulations!</h2>
+            <p class="sgpa-text"><strong><span id="studentName"></span> you got <span id="sgpa"></span> SGPA</strong></p>
+            <!-- Video of fireworks -->
+            <video autoplay loop muted class="fireworks-video">
+                <source src="popup.mp4" type="video/mp4">
+            </video>
+        </div>
+    </main>
+
+    <script>
+        // Get parameters from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        const sgpa = urlParams.get('sgpa');
+
+        // Set values in HTML
+        document.getElementById('studentName').innerText = name;
+        document.getElementById('sgpa').innerText = sgpa;
+    </script>
+</body>
+</html>
